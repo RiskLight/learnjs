@@ -19,7 +19,7 @@ let bar = 20;
 let qwerty = 5;
 let res = bar - qwerty - 10;
 let end = res - qwerty;
-console.log('let end' + '=' + end);
+console.log(`let end = ${end}`);
 
 //Задание 4
 let str = "Hello, Palmo";
@@ -43,7 +43,6 @@ const daySeconds = hourMinutes * secondsMinutes * dayHours;
 console.log(`In day ${daySeconds} seconds`);
 
 const monthSeconds = hourMinutes * hourMinutes * dayHours * daysCurrentMonth;
-
 let monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 forDate = new Date();
 let month = monthNames[forDate.getMonth()];
