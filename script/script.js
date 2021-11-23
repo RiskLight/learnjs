@@ -10,7 +10,7 @@ console.log(first/second);
 
 //Задание 2
 let a = 3
-let b =10
+let b = 10
 let result = a+b
 console.log('let result' + '=' + result);
 
