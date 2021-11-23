@@ -1,8 +1,8 @@
 //Задание 1
 let num = 10
-console.log();
+console.log(num);
 let first = 5
-let second =10
+let second = 10
 console.log(first+second)
 console.log(first-second)
 console.log(first*second)
