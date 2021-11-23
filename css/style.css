@@ -1,0 +1,23 @@
+#hour_seconds, #day_seconds, #month_seconds {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 15px;
+    color: indigo;
+}
+
+#main_block {
+    max-width: 500px;
+    width: 100%;
+    margin: 100px auto;
+    border: 2px solid forestgreen;
+    border-radius: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: darkgreen;
+    text-shadow: gold 2px 2px;
+    font-size: 50px;
+}
