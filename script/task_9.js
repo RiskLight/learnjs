@@ -7,22 +7,23 @@ if (numberOne && numberTwo) {
     alert(`Вы можете выиграть ${winner}`);
 }
 
-let putNumber = +prompt('Введите число, чтобы сыграть');
+const putNumber = +prompt('Введите число, чтобы сыграть');
 
 if (putNumber >= numberOne && putNumber <= numberTwo) {
-    function rand(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
+    const random = rand(numberOne, numberTwo);
 
-    let random = rand(numberOne, numberTwo)
     if (putNumber !== random) {
-        alert(`Лажа, компьютер выбрал ${random}`);
+        alert(`Лажа, компьютер выбрал ${random}, вы проиграли ${winner}`);
     } else {
-        alert('Поздравляю, вы победили!');
+        alert(`Поздравляю, вы выиграли ${winner}!`);
     }
 
 } else {
-    alert('Иди на хуй!')
+    alert('Иди на хуй!');
+}
+
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
 }
