@@ -1,21 +1,25 @@
-const money = +prompt('Бабло');
+const money = +prompt('Введи бабло игроман');
 const numberOne = +prompt('Первое число для игры');
 const numberTwo = +prompt('Второе число для игры');
-const winner = (numberTwo - numberOne) * 0.1 + money;
+if (money && numberOne && numberTwo ) {
+    if (Number.isInteger(numberOne) && Number.isInteger(numberTwo) && Number.isInteger(money)) {
+        const winner = (numberTwo - numberOne) * 0.1 + money;
 
-if (numberOne && numberTwo) {
-    alert(`Вы можете выиграть ${winner}`);
-}
+        if (numberOne && numberTwo) {
+            alert(`Вы можете выиграть ${winner}`);
+        }
 
-const putNumber = +prompt('Введите число, чтобы сыграть');
+        const putNumber = +prompt('Введите число, чтобы сыграть');
 
-if (putNumber >= numberOne && putNumber <= numberTwo) {
-    const random = rand(numberOne, numberTwo);
+        if (putNumber >= numberOne && putNumber <= numberTwo) {
+            const random = rand(numberOne, numberTwo);
 
-    if (putNumber !== random) {
-        alert(`Лажа, компьютер выбрал ${random}, вы проиграли ${winner}`);
-    } else {
-        alert(`Поздравляю, вы выиграли ${winner}!`);
+            if (putNumber !== random) {
+                alert(`Лажа, компьютер выбрал ${random}, вы проиграли ${winner} долларов`);
+            } else {
+                alert(`Поздравляю, вы выиграли ${winner}! не долларов`);
+            }
+        }
     }
 
 } else {

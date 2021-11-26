@@ -9,10 +9,10 @@ const rules = {
 
 const choices = Object.keys(rules);
 
-let computerChoice = choices[Math.floor(Math.random() * 3)];
+const computerChoice = choices[Math.floor(Math.random() * 3)];
 
 if (choices.indexOf(startGame) < 0) {
-    alert('Идиотский выбор');
+    alert('Ты идиот?');
 } else if (startGame === computerChoice) {
     alert('Ничья');
 } else {
