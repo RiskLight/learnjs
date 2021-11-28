@@ -1,30 +1,34 @@
 //Задание 1
-/*function isEven() {
-    let x = +prompt('Введите число для проверки');
-    if (isFinite(x) && x) {
-        return true;
-    } else {
-        return false;
-    }
+/*
+const number = prompt('Введите число для проверки');
 
+function isEven(number) {
+    return number !== '' && isFinite(+number);
 }
 
-alert(isEven())*/
+alert(isEven(number));
+*/
 
 //Задание 2
+/*
+const firstNum = prompt('Введите первое число');
+const secondNum = prompt('Введите второе число');
+const thirdNum = prompt('Введите третье  число');
 
-/*function getAverage () {
-    let firstNum = +prompt('Введите первое число')
-    let secondNum = +prompt('Введите второе число')
-    let thirdNum = +prompt('Введите третье  число')
-    if ((isFinite(firstNum) && isFinite(secondNum) && isFinite(thirdNum)) && (firstNum && secondNum && thirdNum)) {
-        return  firstNum > secondNum ? (firstNum > thirdNum ? thirdNum : firstNum) : (secondNum > thirdNum ? thirdNum : secondNum);
-    } else {
+function getAverage () {
+    if (isCorrectValue(firstNum) && isCorrectValue(secondNum) && isCorrectValue(thirdNum)) {
+        return  +firstNum > +secondNum ? (+firstNum > +thirdNum ? +thirdNum : +firstNum) : (+secondNum > +thirdNum ? +thirdNum : +secondNum);
+}  else {
         return 'Какого хуя ты творишь?';
     }
 }
 
-alert(getAverage());*/
+function isCorrectValue(value) {
+    return value !== '' && isFinite(+value);
+}
+
+alert(getAverage(firstNum, secondNum, thirdNum));
+*/
 
 
 //Задание 3
@@ -34,11 +38,11 @@ alert(getAverage());*/
     penis: 'undefined'
 };
 
-function isEmpty() {
- return user.hasOwnProperty('name');
+function isEmpty(obj) {
+ return 'name' in obj;
 }
 
-alert(isEmpty())*/
+alert(isEmpty(user))*/
 
 //Задание 4
 /*const userTwo = {
@@ -46,10 +50,10 @@ alert(isEmpty())*/
     surname: 'Penis'
 }
 
-function nameSurname() {
-    return `${userTwo.name} ${userTwo.surname}`
+function getNameSurname(obj) {
+    return `${obj.name} ${obj.surname}`;
     }
-alert(nameSurname())*/
+alert(getNameSurname(userTwo));*/
 
 
 //Задание 5
@@ -79,23 +83,21 @@ sumInObject();*/
     surname: undefined
 }
 
-function multiplyNumeric(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] == 'number') {
-            obj[key] /= 2;
-            if (!Number.isInteger(obj[key])) {
-                obj[key] = Math.round(obj[key]);
-            }
-        } else if (typeof obj[key] == 'string') {
-            obj[key] = 'Hello, Palmo';
+function modifyObject(object) {
+    for (let key in object) {
+        if (isFinite(object[key])) {
+            object[key] = Math.round(object[key] / 2);
+        }
+         else if (typeof object[key] === 'string') {
+            object[key] = 'Hello, Palmo';
         } else {
-            delete obj[key];
+            delete object[key];
         }
     }
-    return obj;
+    return object;
 }
 
-console.log(multiplyNumeric(numbers))*/
+console.log(modifyObject(numbers))*/
 
 
 //Задание 7
