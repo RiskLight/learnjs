@@ -231,12 +231,11 @@ console.log(get(arrayToSentence));
 
 //Задание 13
 /*
-let format = '(xxx) xxx-xxxx';
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
+function createPhoneNumber (numbers) {
+    let format = '(xxx) xxx-xxxx';
 
-function createPhoneNumber(numbers){
-    let format = numbers;
-    numbers = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
     for (let number of numbers) {
         format = format.replace('x', number);
     }
@@ -244,5 +243,65 @@ function createPhoneNumber(numbers){
     return format;
 }
 
-console.log(createPhoneNumber(format));
+console.log(createPhoneNumber(numbers));
 */
+
+
+//Задание 14
+/*const users = [
+    {
+        id: 1,
+        name: 'John',
+        age: 20,
+        salary: 1000
+    },
+    {
+        id: 2,
+        name: 'Marry',
+        age: 22,
+        salary: 1500
+    },
+    {
+        id: 3,
+        name: 'Poll',
+        age: 25,
+        salary: 1200
+    },
+];
+
+function getHighestSalary(array) {
+
+}*/
+
+
+//Задание 15
+
+/*
+function checkString (string) {
+    let str = document.getElementById(string);
+    if(str.length >= 3 && str <= 16) {
+        return true
+    }
+}
+
+console.log(checkString('dfdg'));
+*/
+
+
+function checkLength (string) {
+
+}
+
+console.log(checkLength(x));
+
+// Задание 16
+/*
+function validatePassword(password) {
+    let uppers = /[A-Z]/.test(password); // Есть хотя бы одна буква в верхнем регистре
+    let numbers = /\d/.test(password); // Есть хотя бы одна цифра
+    let onlyLatin = /^[A-Za-z\d]{6,}$/.test(password); //Минимум бы 6 цифр
+    return uppers && numbers && onlyLatin;
+
+}
+
+console.log(validatePassword('pass1A'));*/
