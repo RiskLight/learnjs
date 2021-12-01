@@ -15,7 +15,7 @@ alert(upToFist(first));
 /*
 let str = 'Страшно, очень страшно, если бы мы знали, что это такое, но мы не знаем, что это такое!'
 
-function truncate(str, maxlength) {
+function truncate (str, maxlength) {
     return (str.length > maxlength) ?
         str.slice(0, maxlength - 1) + '…' : str;
 }
@@ -54,12 +54,13 @@ const users = [
         surname: 'Baba',
         age: 35
     }
-]
+];
 
 function filterArray (array) {
     let filter = array.filter(function (user) {
         return user.name;
     })
+
     return filter;
 }
 console.log(filterArray(users));
@@ -109,16 +110,18 @@ console.log(modifyToCamelCase(userSnakeName));
 //Задание 7
 // Напишите функцию, которая принимает значение с математическим выражением и возвращает результат его решения.
 // Например: calc('5 + 10') // вернет 15
-
 /*
+
 let x = '5+10';
 
-function pop (string) {
+function getMathsFromString (string) {
     return eval(string);
 }
 
-console.log(pop(x));
+console.log(getMathsFromString(x));
+
 */
+
 
 
 //Задание 8
@@ -139,7 +142,7 @@ const users = [
         name: 'Poll',
         age: 25
     },
-]
+];
 
 function getArrayWithNames(array) {
     return array.map(function (user) {
@@ -197,7 +200,7 @@ const censoredWords = ['Хуй', 'Пиздец', 'Гандон', 'Пизда', '
 let x = 'жопа Хуй';
 
 function checkCensoredWord (str) {
-    str = str.toLowerCase()
+    str = str.toLowerCase();
     for (let item of censoredWords.map(function (items) {
         return items.toLowerCase();
     })) {
@@ -223,7 +226,7 @@ function get (array) {
         if (typeof item === 'string') {
             return item;
         }
-    }).join(' ')
+    }).join(' ');
 }
 
 console.log(get(arrayToSentence));
@@ -248,7 +251,8 @@ console.log(createPhoneNumber(numbers));
 
 
 //Задание 14
-/*const users = [
+/*
+const users = [
     {
         id: 1,
         name: 'John',
@@ -269,9 +273,23 @@ console.log(createPhoneNumber(numbers));
     },
 ];
 
-function getHighestSalary(array) {
+function getHighestSalary (array) {
 
-}*/
+    let max = array.reduce(function (prev, current) {
+        if (current.salary > prev.salary) {
+            return current;
+        } else {
+            return prev;
+        }
+    });
+
+    return max.name;
+}
+
+
+console.log(getHighestSalary(users));
+*/
+
 
 
 //Задание 15
@@ -288,15 +306,10 @@ console.log(checkString('dfdg'));
 */
 
 
-function checkLength (string) {
-
-}
-
-console.log(checkLength(x));
-
 // Задание 16
 /*
-function validatePassword(password) {
+function validatePassword (password) {
+
     let uppers = /[A-Z]/.test(password); // Есть хотя бы одна буква в верхнем регистре
     let numbers = /\d/.test(password); // Есть хотя бы одна цифра
     let onlyLatin = /^[A-Za-z\d]{6,}$/.test(password); //Минимум бы 6 цифр
@@ -304,4 +317,5 @@ function validatePassword(password) {
 
 }
 
-console.log(validatePassword('pass1A'));*/
+console.log(validatePassword('pass1A'));
+*/
