@@ -293,13 +293,20 @@ console.log(getHighestSalary(users));
 
 
 //Задание 15
-
 /*
-function checkString (string) {
-    let str = document.getElementById(string);
-    if(str.length >= 3 && str <= 16) {
-        return true
+function checkString (str) {
+    str = str.trim() ;
+    return  str && str.length >= 3 && str.length <=16 && isNotNumbers(str)
+}
+
+function isNotNumbers (str) {
+    for (let symbol of str) {
+        if (isFinite(+symbol)) {
+            return false
+        }
     }
+
+    return true
 }
 
 console.log(checkString('dfdg'));
@@ -310,12 +317,39 @@ console.log(checkString('dfdg'));
 /*
 function validatePassword (password) {
 
-    let uppers = /[A-Z]/.test(password); // Есть хотя бы одна буква в верхнем регистре
-    let numbers = /\d/.test(password); // Есть хотя бы одна цифра
-    let onlyLatin = /^[A-Za-z\d]{6,}$/.test(password); //Минимум бы 6 цифр
+    const uppers = /[A-Z]/.test(password); // Есть хотя бы одна буква в верхнем регистре
+    const numbers = /\d/.test(password); // Есть хотя бы одна цифра
+    const onlyLatin = /^[A-Za-z\d]{6,}$/.test(password); //Минимум бы 6 цифр
     return uppers && numbers && onlyLatin;
 
 }
 
 console.log(validatePassword('pass1A'));
 */
+
+/*
+function checkPassword (password) {
+    password = password.trim();
+    return password && password.length >= 6 && !isNotNumbers(password) && checkSymbols(password);
+}
+
+function checkSymbols (password) {
+    for (let symbol of password) {
+        if (symbol === symbol.toUpperCase() && !isFinite(+symbol)) {
+            return true
+        }
+    }
+
+    return false
+}
+function isNotNumbers (str) {
+    for (let symbol of str) {
+        if (isFinite(+symbol)) {
+            return false
+        }
+    }
+
+    return true
+}
+
+console.log(checkPassword('Dfaa1g'));*/
