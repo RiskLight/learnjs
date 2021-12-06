@@ -101,7 +101,7 @@
     <div class="item equal">=</div>
 </div>
 
-<div>
+<div class="final">
     <div class="item_box">
         <h3 class="item_title">Samsung Galaxy S10</h3>
         <p>Цена: <span class="item_price">20</span>$</p>
@@ -117,9 +117,22 @@
         <p>Цена: <span class="item_price">1000</span>$</p>
         <button class="add_item" data-id="5">Добавить в корзину</button>
     </div>
-    <button id="checkout">Оформить заказ</button>
-    <button id="clear_cart">Очистить корзину</button>
-    <div id="cart_content"></div>
+<!--    <div id="cart_content"></div>-->
+    <!-- Триггер/Открыть модальный -->
+    <button id="myBtn">Открыть корзину</button>
+
+    <!-- Модальный -->
+    <div id="myModal" class="modal">
+
+        <!-- Модальное содержание -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="checkout"></div>
+            <button id="clear_cart">Очистить корзину</button>
+            <button>Оформить заказ</button>
+            <div id="cart_content"></div>
+        </div>
+    </div>
 </div>
 
 <script src="script/main.js"></script>
