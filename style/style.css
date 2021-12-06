@@ -1,0 +1,198 @@
+body {
+    user-select: none;
+}
+
+.buttons-block {
+    margin: 0 auto;
+    max-width: 360px;
+}
+
+#btn {
+    margin-bottom: 30px;
+    margin-top: 70px;
+}
+
+#first-button {
+    text-align: center;
+}
+
+#first-input {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#second-input {
+    text-align: center;
+}
+
+#h1 {
+    text-align: center;
+}
+
+#color-txt {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#third-input {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4px;
+    background-color: indianred;
+    padding: 4px;
+    border-radius: 5px;
+    max-width: 360px;
+    margin: 100px auto;
+}
+
+.item {
+    background-color: gold;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form {
+    max-width: 100%;
+    display: flex;
+}
+
+.input-pole {
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 30px;
+    outline: none;
+    text-align: right;
+}
+
+.input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 30px;
+    outline: none;
+    text-align: right;
+    grid-column: 1/-1;
+    padding: 0;
+}
+
+.clean {
+    grid-column: 1/3;
+    background-color: goldenrod;
+}
+
+.back {
+    grid-column: 3/-1;
+    background-color: goldenrod;
+}
+
+.zero {
+    grid-column: 1/3;
+}
+
+.equal {
+    grid-column: 4;
+    grid-row: 6/8;
+    background-color: goldenrod;
+}
+
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.green {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+.cont {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#button-list {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#area-list {
+    max-width: 360px;
+    margin: 30px auto;
+}
+
+#area-list-sub {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.form-block {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+}
+
+#login, #email, #age, #password {
+    margin-bottom: 30px;
+}
+
+.success-alert {
+    display: none;
+    border: 2px solid green;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error-login, .error-email, .error-age, .error-password {
+    display: none;
+    margin-bottom: 20px;
+    color: red;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#wrapper {
+    width: 50%;
+    margin: 10px;
+}
+#cart_content {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #060;
+}
+.item_box {
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.shopping_list {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+.shopping_list td,
+.shopping_list th {
+    padding: 10px;
+    border: 1px solid #AAAAAA;
+}
