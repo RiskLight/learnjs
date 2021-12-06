@@ -300,7 +300,7 @@ function addToCart(){
     // Обновляем данные в LocalStorage
     if(!setCartData(cartData)){
         this.disabled = false; // разблокируем кнопку после обновления LS
-        cartCont.innerHTML = 'Товар добавлен в корзину.';
+        // cartCont.innerHTML = 'Товар добавлен в корзину.';
     }
     return false;
 }
