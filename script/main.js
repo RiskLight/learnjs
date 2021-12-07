@@ -144,7 +144,7 @@ let currencies = [
         flagURL: 'https://www.geonames.org/flags/l/ph.gif'
     },
     {
-        name: 'Czech Koruna',
+        name: 'Czech Krona',
         abbreviation: 'CZK',
         symbol: '\u004B\u010D',
         flagURL: 'https://www.geonames.org/flags/l/cz.gif'
@@ -303,7 +303,7 @@ function currenciesListKeyDown (event) {
 
 //Auxiliary Functions
 
-function populateAddCyrrencyList () {
+function populateAddCurrencyList () {
     for(let i = 0; i < currencies.length; i++) {
         addCurrencyList.insertAdjacentHTML(
             'beforeend',
@@ -353,7 +353,7 @@ fetch(dataURL)
         data.rates["EUR"] = 1;
         currencies = currencies.filter(currency => data.rates[currency.abbreviation]);
         currencies.forEach(currency => currency.rate = data.rates[currency.abbreviation]);
-        populateAddCyrrencyList();
+        populateAddCurrencyList();
         populateCurrenciesList();
     })
     .catch(err => console.log(err));
